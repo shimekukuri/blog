@@ -1,24 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useReducer} from "react";
+import Container from "./component/Container";
+import Navigator from "./component/Nav";
+import PropPassTest from "./component/PropPassTest";
+import "./App.css";
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className="snap">
+        <Container>
+          <PropPassTest isAThing="athing"/>
+        </Container>
+        <Container>
+          <PropPassTest isAnotherThing="anotherThing"/>
+        </Container>
+        <Container>
+          <PropPassTest isAnotherAnotherThing="anotherAnotherThing"/>
+        </Container>
+      </div>
+      <Navigator />
+    </>
   );
 }
 

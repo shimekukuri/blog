@@ -1,0 +1,11 @@
+.transition-opacity {
+    transition: all 3s ease-out;
+  }
+  
+  .opacity-0 {
+    opacity: 0;
+  }
+  
+  .opacity-1 {
+    opacity: 1;
+  }
