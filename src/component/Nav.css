@@ -1,19 +1,19 @@
 .test {
-    position: absolute;
-    width: 100%;
-    bottom: 0;
-    z-index: 1;
-    display: flex;
-    justify-content: center;
-    background-color: var(--light-green);
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  background-color: var(--light-green);
 }
 
 .nav-container {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 
 .nav-item {
-margin-left: 1rem;
-margin-right: 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }

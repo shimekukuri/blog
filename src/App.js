@@ -3,6 +3,7 @@ import Container from "./component/Container";
 import Navigator from "./component/Nav";
 import PropPassTest from "./component/PropPassTest";
 import "./App.css";
+import Projects from "./component/projects";
 
 function App() {
 
@@ -13,7 +14,7 @@ function App() {
           <PropPassTest isAThing="athing"/>
         </Container>
         <Container>
-          <PropPassTest isAnotherThing="anotherThing"/>
+          <Projects />
         </Container>
         <Container>
           <PropPassTest isAnotherAnotherThing="anotherAnotherThing"/>

@@ -1,16 +1,15 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "./Container.css";
 import clsx from "clsx";
 import { useInView } from "react-intersection-observer";
 
 export default function Container(props) {
   //destructuring props
-  const { children, classes, innerClasses, onAnimationTrigger, ...rest } =
-    props;
+  const { children, innerClasses } = props;
 
   //Observer related functions and declarations
   const { ref, inView } = useInView({
-    triggerOnce: true,
+    triggerOnce: false,
     rootMargin: `-100px 0px`,
   });
 
@@ -19,7 +18,6 @@ export default function Container(props) {
 
   //Styling for the inner container of the component
   const innerContainerStyles = clsx("inner-container", innerClasses ?? "");
-
 
   //Passing the view boolean down to react children, note that you can only nest in react components
   //into the <Container /> element other wise it tries to write it to the dom.
@@ -35,7 +33,7 @@ export default function Container(props) {
     <>
       <div ref={ref} className={classForStyles}>
         <div className={innerContainerStyles}>
-          <div>{childrenWithProps}</div>
+          {childrenWithProps}
         </div>
       </div>
     </>
