@@ -1,11 +1,36 @@
-.test {
+.area-activator {
+  position: absolute;
+  width: 100%;
+  height: 10vh;
+  bottom: 0;
+  z-index: 1;
+}
+
+.area-activator:hover .navigator {
+  display: flex;
+}
+
+@keyframes onEntrance {
+  from {
+    transform: translate(0, 50px);
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    transform: translate(0, 0px);
+  }
+}
+
+.navigator {
   position: absolute;
   width: 100%;
   bottom: 0;
-  z-index: 1;
-  display: flex;
+  z-index: 2;
+  display: none;
   justify-content: center;
   background-color: var(--light-green);
+  animation: onEntrance 500ms ease-out;
+  animation-fill-mode: forwards;
 }
 
 .nav-container {

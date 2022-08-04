@@ -1,6 +1,6 @@
 import React from "react";
-import Particles from "react-particles";
 import "./projects.css";
+import ProjectCard from "./projectcard";
 
 export default function Projects(props) {
   const { inView } = props;
@@ -12,7 +12,7 @@ export default function Projects(props) {
     <>
       <div className="flex-center full-size">
         <section className="animated-grid flex-center">
-          <div className={animationTrigger}>a</div>
+          <div className={animationTrigger}><ProjectCard /></div>
           <div className={animationTrigger}>b</div>
           <div className={animationTrigger}>c</div>
           <div className={animationTrigger}>d</div>

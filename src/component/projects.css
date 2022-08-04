@@ -7,7 +7,7 @@
   display: none;
 }
 
-img{
+img {
   max-width: 100%;
   max-height: 100%;
   display: block;
@@ -38,27 +38,51 @@ img{
 .card:hover {
   box-shadow: rgba(2, 8, 20, 0.1) 0px 0.35em 1.175em,
     rgba(2, 8, 20, 0.08) 0px 0.175em 0.5em;
-  transform: translateY(-3px) scale(1.02);
+  transform: scale(1.02);
 }
 
-.animated-grid {
-  margin-top: 1%;
-  height: 100%;
-  width: 100%;
+@media only screen and (max-width: 600px) {
+  .animated-grid {
+    height: 100%;
+    width: 100%;
 
-  display: grid;
-  gap: 1rem;
+    display: grid;
+    gap: 0rem;
 
-  /*Explicit grid */
-  grid-template-areas:
-    "a  b   c"
-    "d  e   f"
-    "g  h   i";
+    /*Explicit grid */
+    grid-template-areas:
+      "a  b"
+      "c  d"
+      "e  f"
+      "g  h";
 
-  grid-template-rows: repeat(3, 30%);
-  grid-template-columns: repeat(3, 30%);
+    grid-template-rows: repeat(4, 23.5%);
+    grid-template-columns: repeat(2, 50%);
 
-  --stagger-delay: 100ms;
+    --stagger-delay: 100ms;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .animated-grid {
+    margin-top: 1%;
+    height: 100%;
+    width: 100%;
+
+    display: grid;
+    gap: 1rem;
+
+    /*Explicit grid */
+    grid-template-areas:
+      "a  b   c"
+      "d  e   f"
+      "g  h   i";
+
+    grid-template-rows: repeat(3, 30%);
+    grid-template-columns: repeat(3, 30%);
+
+    --stagger-delay: 100ms;
+  }
 }
 
 @keyframes cardEntrance {
