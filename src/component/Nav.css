@@ -8,6 +8,8 @@
 
 .area-activator:hover .navigator {
   display: flex;
+  animation: onEntrance 500ms ease-out;
+  animation-fill-mode: forwards;
 }
 
 @keyframes onEntrance {
@@ -21,6 +23,17 @@
   }
 }
 
+@keyframes onExit {
+  from {
+    opacity: 1;
+    transform: translate(0, 0px);
+  }
+  to {
+    transform: translate(0, 50px);
+    opacity: 0;
+  }
+}
+
 .navigator {
   position: absolute;
   width: 100%;
@@ -29,8 +42,8 @@
   display: none;
   justify-content: center;
   background-color: var(--light-green);
-  animation: onEntrance 500ms ease-out;
   animation-fill-mode: forwards;
+  animation: onExit 500ms ease-out;
 }
 
 .nav-container {
