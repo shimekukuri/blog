@@ -1,0 +1,39 @@
+ <div className={animationTrigger}>
+            <ProjectCard />
+          </div>
+          <div className={animationTrigger}>b</div>
+          <div className={animationTrigger}>c</div>
+          <div className={animationTrigger}>d</div>
+          <div className={animationTrigger}>e</div>
+          <div className={animationTrigger}>f</div>
+          <div className={animationTrigger}>g</div>
+          <div className={animationTrigger}>h</div>
+          <div className={animationTrigger}>i</div>
+
+
+
+
+          {sanity.length > 0 ? (
+            sanity
+              .slice(0, 11)
+              .sort((a, b) => {
+                return new Date(b._createdAt) - new Date(a._createdAt);
+              })
+              .map((post, i) => {
+                console.log(post);
+                if (post._createdAt) {
+                  return (
+                    <div key={post._createdAt} className={animationTrigger}>
+                      {post.title}
+                    </div>
+                  );
+                }
+                return (
+                  <div key={i} className={animationTrigger}>
+                    {i}
+                  </div>
+                );
+              })
+          ) : (
+            <h1>trouble fetching blog</h1>
+          )}
