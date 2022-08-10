@@ -71,11 +71,12 @@ img {
   }
 
   .animated-grid {
+    margin-top: 4px;
     height: 100%;
     width: 100%;
 
     display: grid;
-    gap: 0rem;
+    gap: 0.01rem;
 
     /*Explicit grid */
     grid-template-areas:

@@ -1,0 +1,190 @@
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 60%;
+}
+
+.profile-picture { 
+  height: 100px;
+  width: 100px;
+}
+
+@keyframes barAnimation {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.animated-bar-container-container {
+  display: flex;
+  justify-content: center;
+  width: 75%;
+  margin: 0;
+}
+
+.animated-bar-container {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  margin-top: 0;
+}
+
+.animated-bar {
+  background-color: red;
+  height: 8px;
+  padding: auto;
+  border-radius: 8px;
+  animation: barAnimation 500ms 500ms;
+  animation-fill-mode: forwards;
+}
+
+.animated-bar2 {
+  background-color: blue;
+  height: 8px;
+  padding: auto;
+  border-radius: 8px;
+  animation: barAnimation 1000ms 500ms;
+  animation-fill-mode: forwards;
+}
+
+.animated-bar3 {
+  background-color: yellow;
+  height: 8px;
+  padding: auto;
+  border-radius: 8px;
+  animation: barAnimation 1500ms 500ms;
+  animation-fill-mode: forwards;
+}
+
+.animated-bar4 {
+  background-color: black;
+  height: 8px;
+  padding: auto;
+  border-radius: 8px;
+  animation: barAnimation 2200ms 500ms;
+  animation-fill-mode: forwards;
+}
+
+@keyframes letterEntrance {
+  from {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  to {
+    opacity: 1;
+  }
+  
+}
+
+.letter { 
+  animation: letterEntrance 500ms;
+  font-size: 7vw;
+  animation-fill-mode: backwards;
+}
+
+.space {
+  white-space: pre;
+}
+
+.animated-name-grid {
+    display: grid;
+
+    /*Explicit grid */
+    grid-template-areas:
+      "J  A  M  E  S   _  T  Y  L  E  R  _  H  U  T  C  H  I  N  S  O  N";
+    grid-template-columns: repeat(22, auto);
+    --stagger-delay: 100ms;
+}
+
+.letter0 {
+  animation-delay: calc(1 * var(--stagger-delay));
+}
+
+.letter1 {
+  animation-delay: calc(2 * var(--stagger-delay));
+}
+
+.letter2 {
+  animation-delay: calc(3 * var(--stagger-delay));
+}
+
+.letter3 {
+  animation-delay: calc(4 * var(--stagger-delay));
+}
+
+.letter4 {
+  animation-delay: calc(5 * var(--stagger-delay));
+}
+
+.letter5 {
+  animation-delay: calc(6 * var(--stagger-delay));
+}
+
+.letter6 {
+  animation-delay: calc(7 * var(--stagger-delay));
+}
+
+.letter7 {
+  animation-delay: calc(8 * var(--stagger-delay));
+}
+
+.letter8 {
+  animation-delay: calc(9 * var(--stagger-delay));
+}
+
+.letter9 {
+  animation-delay: calc(10 * var(--stagger-delay));
+}
+
+.letter10 {
+  animation-delay: calc(11 * var(--stagger-delay));
+}
+
+.letter11 {
+  animation-delay: calc(12 * var(--stagger-delay));
+}
+
+.letter12 {
+  animation-delay: calc(13 * var(--stagger-delay));
+}
+
+.letter13 {
+  animation-delay: calc(14 * var(--stagger-delay));
+}
+
+.letter14 {
+  animation-delay: calc(15 * var(--stagger-delay));
+}
+
+.letter15 {
+  animation-delay: calc(16 * var(--stagger-delay));
+}
+
+.letter16 {
+  animation-delay: calc(17 * var(--stagger-delay));
+}
+
+.letter17 {
+  animation-delay: calc(18 * var(--stagger-delay));
+}
+
+.letter18 {
+  animation-delay: calc(19 * var(--stagger-delay));
+}
+
+.letter19 {
+  animation-delay: calc(20 * var(--stagger-delay));
+}
+
+.letter20 {
+  animation-delay: calc(21 * var(--stagger-delay));
+}
+
+.letter21 {
+  animation-delay: calc(22 * var(--stagger-delay));
+}

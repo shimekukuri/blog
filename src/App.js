@@ -4,6 +4,7 @@ import Navigator from "./component/Nav";
 import PropPassTest from "./component/PropPassTest";
 import "./App.css";
 import Projects from "./component/projects";
+import LandingPage from "./component/LandingPage";
 
 function App() {
   //states
@@ -32,9 +33,11 @@ function App() {
   return (
     <>
       <div className="snap">
-        <Container></Container>
         <Container>
-          <Projects sanity={sanity} URL={URL}/>
+          <LandingPage />
+        </Container>
+        <Container>
+          <Projects sanity={sanity} URL={URL} />
         </Container>
         <Container></Container>
       </div>
