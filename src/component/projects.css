@@ -3,6 +3,11 @@
   height: 100%;
 }
 
+.transition {
+  animation: animated-transition 1000ms;
+  animation-fill-mode: forwards;
+}
+
 .title-container {
   display: flex;
   height: 100%;
@@ -128,6 +133,16 @@ img {
     opacity: 1;
     transform: scale(1);
     filter: hue-rotate(0deg);
+  }
+}
+
+@keyframes animated-transition {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-100%);
+    display: none !important;
   }
 }
 

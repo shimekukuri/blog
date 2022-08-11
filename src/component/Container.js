@@ -5,7 +5,7 @@ import { useInView } from "react-intersection-observer";
 
 export default function Container(props) {
   //destructuring props
-  const { children, innerClasses } = props;
+  const { children, innerClasses, scrollLock} = props;
 
   //Observer related functions and declarations
   const { ref, inView } = useInView({
@@ -14,7 +14,7 @@ export default function Container(props) {
   });
 
   //First container styling
-  const classForStyles = clsx("flex-center", "container");
+  const classForStyles = clsx("flex-center", "container", scrollLock && "scroll-disable");
 
   //Styling for the inner container of the component
   const innerContainerStyles = clsx("inner-container", innerClasses ?? "");

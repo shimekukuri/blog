@@ -26,3 +26,8 @@
   height: 100px;
   background-color: red;
 }
+
+.scroll-disable {
+  max-width: 100%;
+  overflow-x: hidden;
+}

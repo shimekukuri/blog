@@ -7,8 +7,6 @@ export default function LandingPage() {
   const name = `James Tyler Hutchinson`;
   const nameArray = name.split("");
 
-  console.log(nameArray);
-
   return (
     <>
       <div className="flex-container">
@@ -17,7 +15,7 @@ export default function LandingPage() {
             if (letter === ` `) {
               return (
                 <>
-                  <span className={clsx(`letter letter${i} space`)}>
+                  <span key={letter + i} className={clsx(`letter letter${i} space`)}>
                     {letter}
                   </span>
                 </>
@@ -25,7 +23,7 @@ export default function LandingPage() {
             }
             return (
               <>
-                <span className={clsx(`letter letter${i}`)}>{letter}</span>
+                <span key={letter + i} className={clsx(`letter letter${i}`)}>{letter}</span>
               </>
             );
           })}
