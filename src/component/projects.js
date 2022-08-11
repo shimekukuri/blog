@@ -1,18 +1,23 @@
-import React from "react";
+import React, {useState} from "react";
 import "./projects.css";
-import ProjectCard from "./projectcard";
+import clsx from "clsx";
 
 export default function Projects(props) {
   const { inView, sanity, URL } = props;
+  const [transitionOut, setTransitionOut] = useState(false)
 
   //animation trigger value
   const animationTrigger = inView ? "card" : "hide";
+  
+  const handlePostClick = (e) => {
+    console.log(e);
+  }
 
   console.log(sanity);
 
   return (
     <>
-      <div className="flex-center full-size">
+      <div className={clsx("flex-center full-size", transitionOut ? `transition` : ``)}>
         <section className="animated-grid flex-center">
           {sanity.length > 0 ? (
             sanity
@@ -32,7 +37,7 @@ export default function Projects(props) {
                       )}.${post?.mainImage?.asset?._ref.slice(-3)}`,
                     }}
                   >
-                    <div className="title-container">
+                    <div className="title-container" onClick={() => handlePostClick(post)}>
                       <div className="post-author">
                         <div className="author-name">test test</div>
                       </div>

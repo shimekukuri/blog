@@ -12,7 +12,6 @@ export default function LandingPage() {
   return (
     <>
       <div className="flex-container">
-        <img src={profilePicture} alt="yolo" className="profile-picture" />
         <div className="animated-name-grid">
           {nameArray.map((letter, i) => {
             if (letter === ` `) {

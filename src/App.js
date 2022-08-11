@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Container from "./component/Container";
 import Navigator from "./component/Nav";
-import PropPassTest from "./component/PropPassTest";
 import "./App.css";
 import Projects from "./component/projects";
 import LandingPage from "./component/LandingPage";
