@@ -37,10 +37,10 @@ export default function Projects(props) {
 
   return (
     <>
-      {showBlogPosts !== true && (
+      {showBlogPosts && (
         <button onClick={handlePostClick}>GO BACK</button>
       )}
-      {showBlogPosts !== false && (
+      {!showBlogPosts && (
         <div
           className={clsx(
             "flex-center full-size",
