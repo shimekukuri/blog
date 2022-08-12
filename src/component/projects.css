@@ -49,20 +49,6 @@ img {
   z-index: 0;
 }
 
-.card {
-  background: #353535;
-  box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem,
-    rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
-  height: 100%;
-  width: 100%;
-  border-radius: 4px;
-  transition: all 500ms;
-  overflow: hidden;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
 .card:hover {
   box-shadow: rgba(2, 8, 20, 0.1) 0px 0.35em 1.175em,
     rgba(2, 8, 20, 0.08) 0px 0.175em 0.5em;
@@ -76,12 +62,13 @@ img {
   }
 
   .animated-grid {
-    margin-top: 4px;
     height: 100%;
     width: 100%;
 
     display: grid;
     gap: 0.01rem;
+    justify-items: center;
+    align-items: center;
 
     /*Explicit grid */
     grid-template-areas:
@@ -94,6 +81,20 @@ img {
     grid-template-columns: repeat(2, 50%);
 
     --stagger-delay: 100ms;
+  }
+
+  .card {
+    background: #353535;
+    box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem,
+      rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
+    height: 95%;
+    width: 95%;
+    border-radius: 4px;
+    transition: all 500ms;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
   }
 }
 
@@ -120,6 +121,20 @@ img {
     grid-template-columns: repeat(3, 30%);
 
     --stagger-delay: 100ms;
+  }
+
+  .card {
+    background: #353535;
+    box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem,
+      rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
+    height: 100%;
+    width: 100%;
+    border-radius: 4px;
+    transition: all 500ms;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
   }
 }
 

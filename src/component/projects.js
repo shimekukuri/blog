@@ -24,11 +24,15 @@ export default function Projects(props) {
 
   useEffect(() => {
     console.log(selectedPost);
-    const plogPostTimer = setTimeout(handleShowBlogPosts, 1000);
+    if (transitionOut) {
+      const plogPostTimer = setTimeout(handleShowBlogPosts, 1000);
 
-    return () => {
-      clearTimeout(plogPostTimer);
-    };
+      return () => {
+        clearTimeout(plogPostTimer);
+      };
+    } else if (!transitionOut) {
+      handleShowBlogPosts();
+    }
   }, [selectedPost]);
 
   return (
