@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import BlogPost from "./BlogPost";
 import "./projects.css";
 import clsx from "clsx";
 
@@ -23,7 +24,6 @@ export default function Projects(props) {
   };
 
   useEffect(() => {
-    console.log(selectedPost);
     if (transitionOut) {
       const plogPostTimer = setTimeout(handleShowBlogPosts, 1000);
 
@@ -37,8 +37,8 @@ export default function Projects(props) {
 
   return (
     <>
-      {showBlogPosts && (
-        <button onClick={handlePostClick}>GO BACK</button>
+      {showBlogPosts && inView && (
+        <BlogPost handlePostClick={handlePostClick} selectedPost={selectedPost}/>
       )}
       {!showBlogPosts && (
         <div
