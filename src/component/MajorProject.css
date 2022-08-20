@@ -1,0 +1,46 @@
+.screen-container {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+
+  grid-template-areas: "a   b   c";
+
+  grid-template-columns: repeat(3, 30%);
+}
+
+.first-containers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(whitesmoke, rgb(188, 187, 187));
+  box-shadow: rgba(3, 8, 20, 0.1) 1rem 1rem 1rem,
+    rgba(2, 8, 20, 0.1) -1rem -1rem 1rem;
+  height: 95%;
+  width: 95%;
+  border-radius: 4px;
+}
+
+.title-container-project {
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  background-color: red;
+  width: 100%;
+  height: 20%;
+}
+
+.body-project {
+  background-color: blue;
+  width: 100%;
+  height: 70%;
+}
+
+.socials-project {
+background-color: green;
+width: 100%;
+height: 10%;
+border-bottom-left-radius: 4px;
+border-bottom-right-radius: 4px;
+}

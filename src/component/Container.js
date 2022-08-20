@@ -5,7 +5,7 @@ import { useInView } from "react-intersection-observer";
 
 export default function Container(props) {
   //destructuring props
-  const { children, innerClasses, scrollLock} = props;
+  const { children, innerClasses, scrollLock, id} = props;
 
   //Observer related functions and declarations
   const { ref, inView } = useInView({
@@ -24,7 +24,7 @@ export default function Container(props) {
   //!!Will look into fixing later!!
   const childrenWithProps = React.Children.map(children, (child) => {
     if (React.isValidElement(child)) {
-      return React.cloneElement(child, { inView });
+      return React.cloneElement(child, { inView,  id});
     }
     return child;
   });

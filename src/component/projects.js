@@ -50,7 +50,7 @@ export default function Projects(props) {
           <section className="animated-grid flex-center">
             {sanity.length > 0 ? (
               sanity
-                .slice(0, 11)
+                .slice(0, 9)
                 .sort((a, b) => {
                   return new Date(b._createdAt) - new Date(a._createdAt);
                 })
@@ -71,7 +71,7 @@ export default function Projects(props) {
                         onClick={() => handlePostClick(post)}
                       >
                         <div className="post-author">
-                          <div className="author-name">test test</div>
+                          <div className="author-name">James Hutchinson</div>
                         </div>
                         <div className="title-card">
                           <div className="title-card-content">

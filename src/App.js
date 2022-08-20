@@ -4,6 +4,7 @@ import Navigator from "./component/Nav";
 import "./App.css";
 import Projects from "./component/projects";
 import LandingPage from "./component/LandingPage";
+import MajorProject from "./component/MajorProject";
 
 function App() {
   //states
@@ -32,13 +33,13 @@ function App() {
   return (
     <>
       <div className="snap">
-        <Container>
+        <Container id="container1">
           <LandingPage />
-        </Container>
-        <Container>
+        </Container >
+        <Container id="container2"><MajorProject /></Container>
+        <Container id="container3">
           <Projects sanity={sanity} URL={URL} />
         </Container>
-        <Container></Container>
       </div>
       <Navigator />
     </>

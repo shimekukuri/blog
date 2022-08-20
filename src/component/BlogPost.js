@@ -1,6 +1,7 @@
 import React from "react";
 import "./BlogPost.css";
 import ArrowSvg from "./Arrow";
+import { PortableText } from "@portabletext/react";
 
 export default function BlogPost(props) {
   const { selectedPost, handlePostClick } = props;
@@ -23,9 +24,22 @@ export default function BlogPost(props) {
                 )}.${selectedPost?.mainImage?.asset?._ref.slice(-3)}`,
               }}
             >
-              <div className="background-blur"><div><h1 className="selected-post-title">test</h1></div></div>
+              <div className="background-blur">
+                <div className="fill-box">
+                  <div>
+                    <h1 className="selected-post-title">
+                      {selectedPost.title}
+                    </h1>
+                  </div>
+                  <h1 className="flex-end selected-post-author">
+                    Written by: James Tyler Hutchinson
+                  </h1>
+                </div>
+              </div>
             </div>
-            <div>Proper overflow</div>
+            <div className="text-body">
+              <PortableText value={selectedPost.body} />
+            </div>
           </div>
         </div>
       </div>

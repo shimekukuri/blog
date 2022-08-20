@@ -3,13 +3,16 @@ import "./LandingPage.css";
 import profilePicture from "../logo.svg";
 import clsx from "clsx";
 
-export default function LandingPage() {
+export default function LandingPage(props) {
+  const { id } = props;
   const name = `James Tyler Hutchinson`;
   const nameArray = name.split("");
 
+  const containerClasses = clsx("flex-container", id)
+
   return (
     <>
-      <div className="flex-container">
+      <div className={containerClasses}>
         <div className="animated-name-grid">
           {nameArray.map((letter, i) => {
             if (letter === ` `) {
