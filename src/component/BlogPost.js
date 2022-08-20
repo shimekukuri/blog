@@ -32,7 +32,7 @@ export default function BlogPost(props) {
                     </h1>
                   </div>
                   <h1 className="flex-end selected-post-author">
-                    Written by: James Tyler Hutchinson
+                       Written by: James Tyler Hutchinson
                   </h1>
                 </div>
               </div>

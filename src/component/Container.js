@@ -31,7 +31,7 @@ export default function Container(props) {
 
   return (
     <>
-      <div ref={ref} className={classForStyles}>
+      <div id={id} ref={ref} className={classForStyles}>
         <div className={innerContainerStyles}>
           {childrenWithProps}
         </div>

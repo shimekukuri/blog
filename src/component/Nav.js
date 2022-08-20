@@ -1,17 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 import clsx from "clsx";
 import "./Nav.css";
 
 export default function Navigator(props) {
-  const { children } = props;
-
-
-  const handleNavActive = (e) => {
-    let selection = document.querySelector(`#${e.target.value}`);
-    console.log(selection);
-    selection.scrollIntoView();
-
-  }
+  const { children, urlParams, handleScrollTo } = props;
 
   return (
     <>
@@ -19,9 +11,9 @@ export default function Navigator(props) {
         <div className="navigator">
           <nav>
             <ul className="nav-container">
-              <li className="nav-item"><button onClick={handleNavActive} value="container1"></button></li>
-              <li className="nav-item">item 2</li>
-              <li className="nav-item">item 3</li>
+              <li className="nav-item"><button onClick={handleScrollTo} value="container1">Landing Page</button></li>
+              <li className="nav-item"><button onClick={handleScrollTo} value="container2">Major Projects</button></li>
+              <li className="nav-item"><button onClick={handleScrollTo} value="container3">General BlogPost</button></li>
             </ul>
           </nav>
           <div>{children}</div>

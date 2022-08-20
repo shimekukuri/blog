@@ -91,5 +91,3 @@ export default function Projects(props) {
     </>
   );
 }
-
-//style={{backgroundImage: `url(https://cdn.sanity.io/images/s4fylfy4/production/${post.mainImage._ref.subtring(5)})`}}
