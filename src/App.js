@@ -5,6 +5,7 @@ import "./App.css";
 import Projects from "./component/projects";
 import LandingPage from "./component/LandingPage";
 import MajorProject from "./component/MajorProject";
+import ContactMe from "./component/ContactMe";
 
 function App() {
   //states
@@ -17,7 +18,6 @@ function App() {
   let DATASET = "production";
   let QUERY = encodeURIComponent('*[_type == "post"]');
   let URL = `https://${PROJECT_ID}.api.sanity.io/v2021-10-21/data/query/${DATASET}?query=${QUERY}`;
-
 
   //fetching proejcts from sanity
   useEffect(() => {
@@ -35,25 +35,30 @@ function App() {
       .catch((error) => console.error(error.error));
   }, [URL]);
 
-  //scrolling in selections for the navbar 
+  //scrolling in selections for the navbar
   const handleScrollTo = (e) => {
     let selection = document.querySelector(`#${e.target.value}`);
-    selection.scrollIntoView({behavior: "smooth"});
-    console.log(urlParams)
-  }
+    selection.scrollIntoView({ behavior: "smooth" });
+    console.log(urlParams);
+  };
 
   return (
     <>
       <div className="snap">
         <Container id="container1">
           <LandingPage />
-        </Container >
-        <Container id="container2"><MajorProject /></Container>
+        </Container>
+        <Container id="container2">
+          <MajorProject />
+        </Container>
         <Container id="container3">
           <Projects sanity={sanity} URL={URL} />
         </Container>
+        <Container id="container4">
+          <ContactMe />
+        </Container>
       </div>
-      <Navigator urlParams={urlParams} handleScrollTo={handleScrollTo}/>
+      <Navigator urlParams={urlParams} handleScrollTo={handleScrollTo} />
     </>
   );
 }
