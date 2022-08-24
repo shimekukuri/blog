@@ -1,19 +1,25 @@
-import React, { useState, useEffect, useReducer } from "react";
+import React, { useState, useEffect } from "react";
+import { useForm } from "react-hook-form";
 import "./contactMe.css";
 
 export default function ContactMe() {
   const [form, setForm] = useState({});
-  const [submit, setSubmit] = useState(false);
+  const { register, handleSubmit } = useForm();
 
   useEffect(() => {
-    fetch(`https://localhost::3300`, {
-      method: 'POST',
+    fetch(`http://localhost:3300/contactme/`, {
+      method: "POST",
       headers: {
-        'Content-Type' : 'application/json',
+        'Content-Type': 'application/json',
       },
-      body: JSON.stringify(form)
-    })
-  }, [submit]);
+      body: JSON.stringify(form),
+    });
+  }, [form]);
+
+  const onSubmit = (data) => {
+    console.log(data)
+    setForm(data);
+  }
 
   return (
     <>
@@ -29,7 +35,13 @@ export default function ContactMe() {
               </p>
             </div>
             <div className="contact-me-form-container">
-              <form></form>
+              <form className="contact-me-form" onSubmit={handleSubmit(onSubmit)}>
+                <input className="contact-me-input" {...register("name")} type="text" placeholder="test"/>
+                <input className="contact-me-input" {...register("email")} type="email" placeholder="email"/>
+                <input className="contact-me-input" {...register("phone")} type="text" placeholder="phone number" />
+                <input className="contact-me-input" {...register("company")} type="text" placeholder="company" />
+                <input type="submit" />
+              </form>
             </div>
             <div className="contact-me-outro">test</div>
           </div>

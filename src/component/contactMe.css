@@ -2,7 +2,6 @@
   .contact-me-screentainer {
     height: 100%;
     width: 100%;
-    background-color: rgba(165, 42, 42, 0.345);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -16,10 +15,12 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    box-shadow: rgba(3, 8, 20, 0.1) 1rem 1rem 1rem,
+    rgba(2, 8, 20, 0.1) 1rem 1rem 1rem;
+    border-radius: 4px;
   }
 
   .contact-me-innertainer {
-    background-color: rgba(137, 43, 226, 0.298);
     height: 90%;
     width: 90%;
     display: flex;
@@ -34,6 +35,7 @@
   }
 
   .contact-me-form-container {
+    width: 100%;
     height: 50%;
   }
 
@@ -46,7 +48,6 @@
   .contact-me-screentainer {
     height: 100%;
     width: 100%;
-    background-color: rgba(165, 42, 42, 0.345);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -60,12 +61,14 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    box-shadow: rgba(3, 8, 20, 0.1) 1rem 1rem 1rem,
+    rgba(2, 8, 20, 0.1) 1rem 1rem 1rem;
+    border-radius: 4px;
   }
 
   .contact-me-innertainer {
-    background-color: rgba(137, 43, 226, 0.298);
     height: 90%;
-    width: 50%;
+    width: 80%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -78,6 +81,7 @@
   }
 
   .contact-me-form-container {
+    width: 100%;
     height: 60%;
   }
 
@@ -95,4 +99,18 @@
 
 .contact-me-align-text-center {
   text-align: center;
+}
+
+.contact-me-form {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.contact-me-input {
+  width: 80%;
+  line-height: 2rem;
 }
