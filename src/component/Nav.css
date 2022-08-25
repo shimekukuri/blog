@@ -12,6 +12,12 @@
   animation-fill-mode: forwards;
 }
 
+.navigator-force-open {
+  display: flex;
+  animation: onEntrance 500ms ease-out;
+  animation-fill-mode: forwards;
+}
+
 @keyframes onEntrance {
   from {
     transform: translate(0, 50px);
@@ -34,6 +40,17 @@
   }
 }
 
+@keyframes onScale {
+  from {
+    transform: scale(1);
+    transform: transform 2s ease-in-out;
+  }
+
+  to {
+    transform: scale(2);
+  }
+}
+
 .navigator {
   position: absolute;
   width: 100%;
@@ -41,17 +58,28 @@
   z-index: 2;
   display: none;
   justify-content: center;
-  background-color: var(--light-green);
   animation-fill-mode: forwards;
   animation: onExit 500ms ease-out;
 }
 
 .nav-container {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(4, 25%);
+  list-style: none;
+  padding-inline-start: 0px;
 }
 
 .nav-item {
-  margin-left: 1rem;
-  margin-right: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.activenav {
+  transition: transform 250ms linear;
+}
+
+.contact-me-container-button-animation {
+  transform: translateY(100px);
 }

@@ -11,6 +11,7 @@ function App() {
   //states
   const [sanity, setSanity] = useState({});
   const [scrollTo, setScrollTo] = useState();
+  const [activeContainer, setActiveContainer] = useState({container: {}});
   const [urlParams, setUrlParams] = useState();
 
   //vars for usage on sanity io
@@ -45,20 +46,20 @@ function App() {
   return (
     <>
       <div className="snap">
-        <Container id="container1">
+        <Container id="container1" navAlert={setActiveContainer}>
           <LandingPage />
         </Container>
-        <Container id="container2">
+        <Container id="container2" navAlert={setActiveContainer}>
           <MajorProject />
         </Container>
-        <Container id="container3">
+        <Container id="container3" navAlert={setActiveContainer}>
           <Projects sanity={sanity} URL={URL} />
         </Container>
-        <Container id="container4">
+        <Container id="container4" navAlert={setActiveContainer}>
           <ContactMe />
         </Container>
       </div>
-      <Navigator urlParams={urlParams} handleScrollTo={handleScrollTo} />
+      <Navigator urlParams={urlParams} handleScrollTo={handleScrollTo} navAlert={activeContainer}/>
     </>
   );
 }
