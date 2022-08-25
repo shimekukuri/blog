@@ -11,22 +11,22 @@ export default function Navigator(props) {
   //button activators
   const c1Classes = clsx({
     activenav: navAlert.container.container1,
-    "contact-me-container-button-animation": !navAlert.container.container1,
+    "navigator-active-animation": navAlert.container.container1,
     "navigator-force-open": forceOpen 
   });
   const c2Classes = clsx({
     activenav: navAlert.container.container2,
-    "contact-me-container-button-animation": !navAlert.container.container2,
+    "navigator-active-animation": navAlert.container.container2,
     "navigator-force-open": forceOpen
   });
   const c3Classes = clsx({
     activenav: navAlert.container.container3,
-    "contact-me-container-button-animation": !navAlert.container.container3,
+    "navigator-active-animation": navAlert.container.container3,
     "navigator-force-open": forceOpen
   });
   const c4Classes = clsx({
     activenav: navAlert.container.container4,
-    "contact-me-container-button-animation": !navAlert.container.container4,
+    "navigator-active-animation": navAlert.container.container4,
     "navigator-force-open": forceOpen
   });
   //navigator force open

@@ -14,8 +14,6 @@
 
 .navigator-force-open {
   display: flex;
-  animation: onEntrance 500ms ease-out;
-  animation-fill-mode: forwards;
 }
 
 @keyframes onEntrance {
@@ -76,10 +74,7 @@
   align-items: center;
 }
 
-.activenav {
-  transition: transform 250ms linear;
-}
-
-.contact-me-container-button-animation {
-  transform: translateY(100px);
+.navigator-active-animation {
+  transform: scale(1.1);
+  transform: translateY(10px);
 }
