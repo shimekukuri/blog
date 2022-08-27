@@ -10,21 +10,25 @@ export default function Navigator(props) {
   //clsx custom classes
   //button activators
   const c1Classes = clsx({
+    "nav-button" : true,
     activenav: navAlert.container.container1,
     "navigator-active-animation": navAlert.container.container1,
     "navigator-force-open": forceOpen 
   });
   const c2Classes = clsx({
+    "nav-button" : true,
     activenav: navAlert.container.container2,
     "navigator-active-animation": navAlert.container.container2,
     "navigator-force-open": forceOpen
   });
   const c3Classes = clsx({
+    "nav-button" : true,
     activenav: navAlert.container.container3,
     "navigator-active-animation": navAlert.container.container3,
     "navigator-force-open": forceOpen
   });
   const c4Classes = clsx({
+    "nav-button" : true,
     activenav: navAlert.container.container4,
     "navigator-active-animation": navAlert.container.container4,
     "navigator-force-open": forceOpen
@@ -87,7 +91,7 @@ export default function Navigator(props) {
                   onClick={handleScrollTo}
                   value="container4"
                 >
-                  ContactMe
+                  Contact Me
                 </button>
               </li>
             </ul>
