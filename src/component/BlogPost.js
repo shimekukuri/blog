@@ -5,7 +5,6 @@ import { PortableText } from "@portabletext/react";
 
 export default function BlogPost(props) {
   const { selectedPost, handlePostClick } = props;
-  console.log(selectedPost);
 
   return (
     <>

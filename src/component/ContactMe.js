@@ -7,8 +7,6 @@ export default function ContactMe() {
   const [submitTheForm, setSubmitTheForm] = useState(false);
   const { register, handleSubmit } = useForm();
 
-  console.log(form);
-
   useEffect(() => {
     if (form === {}) return;
     fetch(`http://localhost:3300/contactme/`, {
@@ -19,11 +17,9 @@ export default function ContactMe() {
       body: JSON.stringify(form),
     })
       .then((response) => response.json())
-      .then((data) => console.log(data));
   }, [submitTheForm]);
 
   const onSubmit = (data) => {
-    console.log(data);
     setSubmitTheForm((prev) => !prev);
     setForm(data);
   };
