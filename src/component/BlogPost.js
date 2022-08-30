@@ -1,6 +1,7 @@
 import React from "react";
 import "./BlogPost.css";
 import ArrowSvg from "./Arrow";
+import Share from "./Share";
 import { PortableText } from "@portabletext/react";
 
 export default function BlogPost(props) {
@@ -30,9 +31,17 @@ export default function BlogPost(props) {
                       {selectedPost.title}
                     </h1>
                   </div>
-                  <h1 className="flex-end selected-post-author">
-                       Written by: James Tyler Hutchinson
-                  </h1>
+                  <div className="flex-end">
+                    <div className="share-button-container">
+                    <Share className="share-button" onClick={() => {
+                      navigator.clipboard.writeText(`http://localhost:3000/?blog=${selectedPost._createdAt}`);
+                      alert(`Link is now in your clipboard :)`)
+                    }}/>
+                    </div>
+                    <h1 className="flex-end selected-post-author">
+                      Written by: James Tyler Hutchinson
+                    </h1>
+                  </div>
                 </div>
               </div>
             </div>

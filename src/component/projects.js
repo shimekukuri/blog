@@ -4,7 +4,7 @@ import "./projects.css";
 import clsx from "clsx";
 
 export default function Projects(props) {
-  const { inView, sanity, URL } = props;
+  const { inView, sanity, URL, urlParams } = props;
   const [transitionOut, setTransitionOut] = useState(false);
   const [selectedPost, setSelectedPost] = useState({});
   const [showBlogPosts, setShowBlogPosts] = useState(false);
@@ -15,18 +15,22 @@ export default function Projects(props) {
   //functions for handeling animation of selecting blog posts
 
   const handlePostClick = (e) => {
-    setTransitionOut(!transitionOut);
+    setTransitionOut(prev => !prev);
     setSelectedPost(e);
+    if(urlParams) {
+      window.location.replace(`http://localhost:3000`)
+    }
   };
 
   const handleShowBlogPosts = () => {
     setShowBlogPosts((prev) => !prev);
   };
 
+  
   useEffect(() => {
     if (transitionOut) {
       const plogPostTimer = setTimeout(handleShowBlogPosts, 1000);
-
+      
       return () => {
         clearTimeout(plogPostTimer);
       };
@@ -34,11 +38,24 @@ export default function Projects(props) {
       handleShowBlogPosts();
     }
   }, [selectedPost]);
+  
+  //if Url Params exist than set them to selectedPost
+  useEffect(() => {
+    if (urlParams) {
+      setTransitionOut(!transitionOut);
+      console.log(sanity);
+      setSelectedPost( ...sanity.filter((post) => post._createdAt === urlParams));
+      console.log(selectedPost);
+    }
+  }, [sanity]);
 
   return (
     <>
       {showBlogPosts && inView && (
-        <BlogPost handlePostClick={handlePostClick} selectedPost={selectedPost}/>
+        <BlogPost
+          handlePostClick={handlePostClick}
+          selectedPost={selectedPost}
+        />
       )}
       {!showBlogPosts && (
         <div

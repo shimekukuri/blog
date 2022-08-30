@@ -11,7 +11,7 @@ function App() {
   //states
   const [sanity, setSanity] = useState({});
   const [scrollTo, setScrollTo] = useState();
-  const [activeContainer, setActiveContainer] = useState({container: {}});
+  const [activeContainer, setActiveContainer] = useState({ container: {} });
   const [urlParams, setUrlParams] = useState();
 
   //vars for usage on sanity io
@@ -36,13 +36,23 @@ function App() {
       .catch((error) => console.error(error.error));
   }, [URL]);
 
-  //scrolling in selections for the navbar
+  //useEffect for if urlParams exists scroll to container 3 and select post
+  useEffect(() => {
+    if (urlParams) {
+      let selection = document.querySelector("#container3");
+      selection.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [urlParams]);
+
+  //scrolling in selections for the navbar & URL PARAMS
   const handleScrollTo = (e) => {
-    let selection = document.querySelector(`#${e.target.value}`);
-    selection.scrollIntoView({ behavior: "smooth" });
+    if (e.target.value) {
+      let selection = document.querySelector(`#${e.target.value}`);
+      selection.scrollIntoView({ behavior: "smooth" });
+    }
     console.log(urlParams);
   };
-
+  
   return (
     <>
       <div className="snap">
@@ -53,13 +63,17 @@ function App() {
           <MajorProject />
         </Container>
         <Container id="container3" navAlert={setActiveContainer}>
-          <Projects sanity={sanity} URL={URL} />
+          <Projects sanity={sanity} URL={URL} urlParams={urlParams}/>
         </Container>
         <Container id="container4" navAlert={setActiveContainer}>
           <ContactMe />
         </Container>
       </div>
-      <Navigator urlParams={urlParams} handleScrollTo={handleScrollTo} navAlert={activeContainer}/>
+      <Navigator
+        urlParams={urlParams}
+        handleScrollTo={handleScrollTo}
+        navAlert={activeContainer}
+      />
     </>
   );
 }
