@@ -33,10 +33,24 @@ export default function BlogPost(props) {
                   </div>
                   <div className="flex-end">
                     <div className="share-button-container">
-                    <Share className="share-button" onClick={() => {
-                      navigator.clipboard.writeText(`http://localhost:3000/?blog=${selectedPost._createdAt}`);
-                      alert(`Link is now in your clipboard :)`)
-                    }}/>
+                      <Share
+                        className="share-button"
+                        onClick={() => {
+                          navigator.clipboard
+                            .writeText(
+                              `http://localhost:3000/?blog=${selectedPost._createdAt}`
+                            )
+                            .then(
+                              () => {
+                                alert(`Link is now in your clipboard :)`);
+                              },
+                              () => {
+                                alert(`Something went wrong`);
+                              }
+                            )
+                            .catch((error) => alert(error));
+                        }}
+                      />
                     </div>
                     <h1 className="flex-end selected-post-author">
                       Written by: James Tyler Hutchinson
