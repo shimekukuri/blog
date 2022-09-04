@@ -17,6 +17,7 @@ export default function ContactMe() {
       body: JSON.stringify(form),
     })
       .then((response) => response.json())
+      .then((data) => console.log(data))
   }, [submitTheForm]);
 
   const onSubmit = (data) => {
