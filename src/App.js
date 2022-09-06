@@ -50,7 +50,6 @@ function App() {
       let selection = document.querySelector(`#${e.target.value}`);
       selection.scrollIntoView({ behavior: "smooth" });
     }
-    console.log(urlParams);
   };
   
   return (
