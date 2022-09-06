@@ -41,7 +41,7 @@ export default function MajorProject(props) {
                   <li>Any FromSoftware title</li>
                   <li>Nausicaa of the valley of the wind (manga) by Hayao Miyazaki</li>
                   <li>Tolken</li>
-                  <li>All the other stuff</li>
+                  <li>Programing</li>
                 </ul>
               </div>
             </div>
