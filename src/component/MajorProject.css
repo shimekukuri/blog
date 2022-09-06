@@ -97,4 +97,5 @@ border-bottom-right-radius: 4px;
 
 .mp-body-text {
   width: 95%;
+  overflow: auto;
 }
