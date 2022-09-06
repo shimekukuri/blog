@@ -12,7 +12,7 @@ export default function MajorProject(props) {
           <div className="first-containers">
             <div className="title-container-project">
               <div className="flex-devide">
-                <div className="project-header">This Website!</div>
+                <div className="project-header">About me</div>
                 <div className="justify-image">
                   <img
                     className="profile"
@@ -23,7 +23,18 @@ export default function MajorProject(props) {
               </div>
             </div>
             <div className="body-project">
-              <p>Welcome, you are already here</p>
+              <div className="mp-body-text">
+                <p>
+                  Thanks for stopping by I'm James, an inspiring web developer
+                  with an associates in computer networking, and a bechelors of
+                  Business. After graduating I spent two years working in retail
+                  management.
+                </p>
+                <p>
+                  In my spare time I enjoy spending time with my beautiful new
+                  baby girl and wife. 
+                </p>
+              </div>
             </div>
             <div className="socials-project">Socials</div>
           </div>
