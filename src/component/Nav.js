@@ -91,7 +91,7 @@ export default function Navigator(props) {
                   onClick={handleScrollTo}
                   value="container4"
                 >
-                  Contact Me Form
+                  Contact
                 </button>
               </li>
             </ul>

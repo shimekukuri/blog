@@ -77,9 +77,11 @@
 
 .navigator-active-animation {
   transform: translateY(-50px) scale(1.5);
+  width: auto !important;
 }
 .nav-button {
   height: 100%;
+  width: 100%;
   background-color: rgba(255, 255, 255, 0.423);
   border: none;;
 }
