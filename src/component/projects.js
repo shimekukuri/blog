@@ -4,7 +4,7 @@ import "./projects.css";
 import clsx from "clsx";
 
 export default function Projects(props) {
-  const { inView, sanity, URL, urlParams } = props;
+  const { inView, sanity, urlParams } = props;
   const [transitionOut, setTransitionOut] = useState(false);
   const [selectedPost, setSelectedPost] = useState({});
   const [showBlogPosts, setShowBlogPosts] = useState(false);
