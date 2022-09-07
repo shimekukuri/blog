@@ -50,7 +50,7 @@ function App() {
       selection.scrollIntoView({ behavior: "smooth" });
     }
   };
-  
+
   return (
     <>
       <div className="snap">
@@ -61,7 +61,7 @@ function App() {
           <MajorProject />
         </Container>
         <Container id="container3" navAlert={setActiveContainer}>
-          <Projects sanity={sanity} URL={URL} urlParams={urlParams}/>
+          <Projects sanity={sanity} URL={URL} urlParams={urlParams} />
         </Container>
         <Container id="container4" navAlert={setActiveContainer}>
           <ContactMe />
