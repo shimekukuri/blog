@@ -3,7 +3,7 @@ import clsx from "clsx";
 import "./Nav.css";
 
 export default function Navigator(props) {
-  const { children, urlParams, handleScrollTo, navAlert } = props;
+  const { children, handleScrollTo, navAlert } = props;
   const [forceOpen, setForceOpen] = useState(false);
   const [forceOpenTimeOut, setForceOpenTimeOut] = useState(true);
 
