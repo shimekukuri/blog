@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./MajorProject.css";
 import clsx from "clsx";
 
