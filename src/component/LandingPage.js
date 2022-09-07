@@ -1,4 +1,5 @@
 import React from "react";
+import ArrowDown from "./ArrowDown";
 import "./LandingPage.css";
 import clsx from "clsx";
 
@@ -7,7 +8,7 @@ export default function LandingPage(props) {
   const name = `James Tyler Hutchinson`;
   const nameArray = name.split("");
 
-  const containerClasses = clsx("flex-container", id)
+  const containerClasses = clsx("flex-container", id);
 
   return (
     <>
@@ -17,7 +18,10 @@ export default function LandingPage(props) {
             if (letter === ` `) {
               return (
                 <>
-                  <span key={letter + i} className={clsx(`letter letter${i} space`)}>
+                  <span
+                    key={letter + i}
+                    className={clsx(`letter letter${i} space`)}
+                  >
                     {letter}
                   </span>
                 </>
@@ -25,7 +29,9 @@ export default function LandingPage(props) {
             }
             return (
               <>
-                <span key={letter + i} className={clsx(`letter letter${i}`)}>{letter}</span>
+                <span key={letter + i} className={clsx(`letter letter${i}`)}>
+                  {letter}
+                </span>
               </>
             );
           })}
@@ -42,6 +48,7 @@ export default function LandingPage(props) {
           </div>
         </div>
       </div>
+      <ArrowDown className="arrow-down" />
     </>
   );
 }
