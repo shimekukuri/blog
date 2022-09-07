@@ -37,6 +37,7 @@ export default function Projects(props) {
     } else if (!transitionOut) {
       handleShowBlogPosts();
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [selectedPost]);
   
   //if Url Params exist than set them to selectedPost
