@@ -10,7 +10,6 @@ import ContactMe from "./component/ContactMe";
 function App() {
   //states
   const [sanity, setSanity] = useState({});
-  const [scrollTo, setScrollTo] = useState();
   const [activeContainer, setActiveContainer] = useState({ container: {} });
   const [urlParams, setUrlParams] = useState();
 
