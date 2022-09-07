@@ -1,6 +1,5 @@
 import React from "react";
 import "./MajorProject.css";
-import clsx from "clsx";
 
 export default function MajorProject(props) {
   const { inView } = props;
