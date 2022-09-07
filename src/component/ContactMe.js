@@ -18,6 +18,7 @@ export default function ContactMe() {
     })
       .then((response) => response.json())
       .then((data) => console.log(data))
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [submitTheForm]);
 
   const onSubmit = (data) => {
