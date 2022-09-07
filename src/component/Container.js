@@ -17,6 +17,7 @@ export default function Container(props) {
     navAlert(prev => {
       return {container: {...prev.container, [id]: inView}}
     })
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [inView]);
 
   //First container styling
