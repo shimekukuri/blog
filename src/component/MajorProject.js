@@ -44,17 +44,14 @@ export default function MajorProject(props) {
                 </ul>
               </div>
             </div>
-            <div className="socials-project">Socials</div>
           </div>
           <div className="first-containers">
             <div className="title-container-project">Title</div>
             <div className="body-project">Body</div>
-            <div className="socials-project">Socials</div>
           </div>
           <div className="first-containers">
             <div className="title-container-project">Title</div>
             <div className="body-project">Body</div>
-            <div className="socials-project">Socials</div>
           </div>
         </div>
       )}
