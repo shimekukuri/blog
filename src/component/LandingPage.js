@@ -1,6 +1,5 @@
 import React from "react";
 import "./LandingPage.css";
-import profilePicture from "../logo.svg";
 import clsx from "clsx";
 
 export default function LandingPage(props) {
