@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import "./Container.css";
 import clsx from "clsx";
 import { useInView } from "react-intersection-observer";
