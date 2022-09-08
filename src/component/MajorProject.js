@@ -8,7 +8,7 @@ export default function MajorProject(props) {
     <>
       {inView && (
         <div className="screen-container">
-          <div className="first-containers">
+          <div className="first-containers animate-container-mp-1">
             <div className="title-container-project">
               <div className="flex-devide">
                 <div className="project-header">About me</div>
@@ -47,7 +47,7 @@ export default function MajorProject(props) {
               </div>
             </div>
           </div>
-          <div className="first-containers">
+          <div className="first-containers animate-container-mp-2">
             <div className="title-container-project">
               <div className="project-header">Resume</div>
             </div>
@@ -89,7 +89,7 @@ export default function MajorProject(props) {
               </div>
             </div>
           </div>
-          <div className="first-containers">
+          <div className="first-containers animate-container-mp-3">
             <div className="title-container-project">
               <div className="project-header">Major Projects</div>
             </div>

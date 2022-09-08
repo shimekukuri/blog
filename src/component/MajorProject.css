@@ -32,6 +32,15 @@
   }
 }
 
+@keyframes animate-mp-container {
+  from {
+    opacity: 0;
+    transform: translateX(-1000px);
+  } to {
+    opacity: 1;
+  }
+}
+
 .first-containers {
   display: flex;
   flex-direction: column;
@@ -43,6 +52,20 @@
   width: 95%;
   border-radius: 4px;
 }
+
+.animate-container-mp-1 {
+  animation: animate-mp-container 500ms backwards 0ms;
+}
+
+.animate-container-mp-2 {
+  animation: animate-mp-container 500ms backwards 300ms;
+}
+
+.animate-container-mp-3 {
+  animation: animate-mp-container 500ms backwards 600ms;
+}
+
+
 
 .title-container-project {
   border-top-left-radius: 4px;
