@@ -56,7 +56,7 @@ img {
   transform: scale(1.02);
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 900px) {
   .post-title {
     font-weight: 700;
     font-size: small;
@@ -99,7 +99,7 @@ img {
   }
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 900px) {
   .post-title {
     font-weight: 700;
   }

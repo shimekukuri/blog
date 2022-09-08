@@ -32,13 +32,15 @@ export default function MajorProject(props) {
                 <p>
                   In my spare time I enjoy spending time with my beautiful new
                   baby girl and wife. Avid collector of video games, vinyl
-                  records, and rare books. 
+                  records, and rare books.
                 </p>
                 <h4> Top 5</h4>
                 <ul>
                   <li>Authentic Ramen</li>
                   <li>Any FromSoftware title</li>
-                  <li>Nausicaa of the valley of the wind (manga) by Hayao Miyazaki</li>
+                  <li>
+                    Nausicaa of the valley of the wind (manga) by Hayao Miyazaki
+                  </li>
                   <li>Tolken</li>
                   <li>Programing</li>
                 </ul>
@@ -46,12 +48,54 @@ export default function MajorProject(props) {
             </div>
           </div>
           <div className="first-containers">
-            <div className="title-container-project">Title</div>
-            <div className="body-project">Body</div>
+            <div className="title-container-project">
+              <div className="project-header">Resume</div>
+            </div>
+            <div className="body-project">
+              <div className="mp-body-text">
+                <h3>Education</h3>
+                <div style={{ fontWeight: "bolder" }}>
+                  Ferris State University
+                </div>
+                <div>Bachelors of Business</div>
+                <div style={{ fontWeight: "bolder" }}>
+                  Saint Clair County Community College
+                </div>
+                <div>Associates of computer newtworking</div>
+                <h3>References</h3>
+                <div style={{ fontWight: "bolder" }}>Jackson Hicks</div>
+                <div style={{ opacity: "0.5" }}>
+                  (Contanct Information available upon request)
+                </div>
+                <div style={{ fontWight: "bolder" }}>Demita Luquer</div>
+                <div style={{ opacity: "0.5" }}>
+                  (Contanct Information available upon request)
+                </div>
+                <div style={{ fontWight: "bolder" }}>Chris Sanders</div>
+                <div style={{ opacity: "0.5" }}>
+                  (Contanct Information available upon request)
+                </div>
+                <h3>Work History</h3>
+                <div className="mp-body-text">
+                  <div style={{ fontWeight: "bolder" }}>Meijer</div>
+                  <li>Overnight General Merchandise manager</li>
+                  <li>2020-2021</li>
+                  <div style={{ fontWeight: "bolder" }}>
+                    Ollies Bargain outlet
+                  </div>
+                  <li>Co General Manager</li>
+                  <li>2021-2022</li>
+                </div>
+              </div>
+            </div>
           </div>
           <div className="first-containers">
-            <div className="title-container-project">Title</div>
-            <div className="body-project">Body</div>
+            <div className="title-container-project">
+              <div className="project-header">Major Projects</div>
+            </div>
+            <div className="body-project">
+              <div className="mp-body-text">test</div>
+            </div>
           </div>
         </div>
       )}
