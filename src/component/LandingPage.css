@@ -114,6 +114,40 @@
     --stagger-delay: 100ms;
 }
 
+@keyframes svganiamtion {
+  from {
+      opacity: 0;
+      transform: translateY(1000px);
+  } to {
+      opacity: 1;
+  }
+}
+
+.svg {
+  animation: svganiamtion 400ms 500ms;
+  animation-fill-mode: backwards;
+}
+
+.svg1 {
+  animation: svganiamtion 800ms 500ms;
+  animation-fill-mode: backwards;
+}
+
+.svg2 {
+  animation: svganiamtion 1200ms 500ms;
+  animation-fill-mode: backwards;
+}
+
+.svg3 {
+  animation: svganiamtion 1600ms 500ms;
+  animation-fill-mode: backwards;
+}
+
+.svg4 {
+  animation: svganiamtion 2200ms 500ms;
+  animation-fill-mode: backwards;
+}
+
 .letter0 {
   animation-delay: calc(1 * var(--stagger-delay));
 }
