@@ -78,6 +78,8 @@
 .navigator-active-animation {
   transform: translateY(-50px) scale(1.5);
   width: auto !important;
+  padding: 20px;
+  border-radius: 50%;
 }
 .nav-button {
   height: 100%;
