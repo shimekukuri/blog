@@ -94,7 +94,17 @@ export default function MajorProject(props) {
               <div className="project-header">Major Projects</div>
             </div>
             <div className="body-project">
-              <div className="mp-body-text">test</div>
+              <div className="mp-body-text">
+                <h3>Docker, express and postgresql</h3>
+                <p>
+                  Docker container utilizing both express and postgresql, easily
+                  doployable simply change the schema in the initalize function
+                  of the express image, and write in your own sql query. By
+                  default there is no way to access the database from the
+                  outside. I built this to serve as the database for the contact
+                  form for this website. 
+                </p>
+              </div>
             </div>
           </div>
         </div>
