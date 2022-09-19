@@ -76,10 +76,7 @@
 }
 
 .navigator-active-animation {
-  transform: translateY(-50px) scale(1.5);
-  width: auto !important;
-  border-radius: 50%;
-  padding: 25px;
+  transform: translateY(-50px);
 }
 .nav-button {
   height: 100%;
