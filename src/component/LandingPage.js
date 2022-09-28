@@ -22,22 +22,18 @@ export default function LandingPage(props) {
           {nameArray.map((letter, i) => {
             if (letter === ` `) {
               return (
-                <>
-                  <span
-                    key={letter + i}
-                    className={clsx(`letter letter${i} space`)}
-                  >
-                    {letter}
-                  </span>
-                </>
+                <span
+                  key={letter + i}
+                  className={clsx(`letter letter${i} space`)}
+                >
+                  {letter}
+                </span>
               );
             }
             return (
-              <>
-                <span key={letter + i} className={clsx(`letter letter${i}`)}>
-                  {letter}
-                </span>
-              </>
+              <span key={letter + i} className={clsx(`letter letter${i}`)}>
+                {letter}
+              </span>
             );
           })}
         </div>
@@ -53,14 +49,14 @@ export default function LandingPage(props) {
           </div>
         </div>
         <div className="animated-svg-container">
-          <ReactSVG className="svg"/>
-          <JsSVG className="svg1"/>
-          <CssSVG className="svg2"/>
-          <HtmlSVG className="svg3"/>
+          <ReactSVG className="svg" />
+          <JsSVG className="svg1" />
+          <CssSVG className="svg2" />
+          <HtmlSVG className="svg3" />
           <DockerSVG className="svg4" />
         </div>
       </div>
-      <ArrowDown className="arrow-down" />
+      <nav className="arrow-down">Nav</nav>
     </>
   );
 }

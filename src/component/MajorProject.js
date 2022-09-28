@@ -102,8 +102,21 @@ export default function MajorProject(props) {
                   of the express image, and write in your own sql query. By
                   default there is no way to access the database from the
                   outside. I built this to serve as the database for the contact
-                  form for this website. 
+                  form for this website.
                 </p>
+                <h4
+                  className="link-text"
+                  onClick={() =>
+                    window.open(
+                      "https://github.com/shimekukuri/DockerComposeSQLExpress"
+                    )
+                  }
+                >
+                  Github
+                </h4>
+              </div>
+              <div className="mp-body-text">
+                <h3>Ecom website</h3>
               </div>
             </div>
           </div>
