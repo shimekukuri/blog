@@ -18,7 +18,7 @@ export default function Projects(props) {
     setTransitionOut(prev => !prev);
     setSelectedPost(e);
     if(urlParams) {
-      window.location.replace(`http://localhost:3000`)
+      window.location.replace(`${process.env.REACT_APP_HOST}`)
     }
   };
 

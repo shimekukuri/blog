@@ -21,6 +21,7 @@ function App() {
 
   //fetching proejcts from sanity
   useEffect(() => {
+    console.log(process.env.REACT_APP_TESTO)
     document.title = "Tyler James Hutchinson";
     const yolo = new URLSearchParams(window.location.search);
     setUrlParams(yolo.get(`blog`));

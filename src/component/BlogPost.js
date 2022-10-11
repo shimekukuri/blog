@@ -38,7 +38,7 @@ export default function BlogPost(props) {
                         onClick={() => {
                           navigator.clipboard
                             .writeText(
-                              `http://localhost:3000/?blog=${selectedPost._createdAt}`
+                              `${process.env.REACT_APP_HOST}?blog=${selectedPost._createdAt}`
                             )
                             .then(
                               () => {
