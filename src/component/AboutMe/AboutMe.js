@@ -46,9 +46,21 @@ export default function AboutMe(props) {
   };
 
   //navButton active
-  const nav1 = clsx("about-nav-buttons", inView1 ? "active-nav-button" : "");
-  const nav2 = clsx("about-nav-buttons", inView2 ? "active-nav-button" : "");
-  const nav3 = clsx("about-nav-buttons", inView3 ? "active-nav-button" : "");
+  const nav1 = clsx(
+    "about-nav-buttons",
+    "title-background-image-1",
+    inView1 ? "active-nav-button" : ""
+  );
+  const nav2 = clsx(
+    "about-nav-buttons",
+    "title-background-image-2",
+    inView2 ? "active-nav-button" : ""
+  );
+  const nav3 = clsx(
+    "about-nav-buttons",
+    "title-background-image-3",
+    inView3 ? "active-nav-button" : ""
+  );
 
   return (
     <>
@@ -93,9 +105,9 @@ export default function AboutMe(props) {
                   <div
                     ref={ref1}
                     id="aboutMe1"
-                    className="first-containers animate-container-mp-1 border-r"
+                    className="first-containers border-r"
                   >
-                    <div className="title-container-project">
+                    <div className="title-container-project title-background-image-1">
                       <div className="flex-devide">
                         <div className="project-header">About me</div>
                         <div className="justify-image">
@@ -117,6 +129,13 @@ export default function AboutMe(props) {
                           my dream of Programing.
                         </p>
                         <p>
+                          I love to learn new things, I'm a little obsessive
+                          when it comes to it. If I have a question I won't stop
+                          searching until I have the answer. I'm purely self
+                          taught, but I've taken multiple online courses and
+                          have read every doc I can get my hand on.
+                        </p>
+                        <p>
                           In my spare time I enjoy spending time with my
                           beautiful new baby girl and wife. Avid collector of
                           video games, vinyl records, and rare books.
@@ -129,7 +148,7 @@ export default function AboutMe(props) {
                             Nausicaa of the valley of the wind (manga) by Hayao
                             Miyazaki
                           </li>
-                          <li>Tolken</li>
+                          <li>Tolkien</li>
                           <li>Programing</li>
                         </ul>
                       </div>
@@ -146,7 +165,7 @@ export default function AboutMe(props) {
                     id="aboutMe2"
                     className="first-containers animate-container-mp-2"
                   >
-                    <div className="title-container-project">
+                    <div className="title-container-project title-background-image-2">
                       <div className="project-header">Resume</div>
                     </div>
                     <div className="body-project">
@@ -201,7 +220,7 @@ export default function AboutMe(props) {
                     id="aboutMe3"
                     className="first-containers animate-container-mp-3"
                   >
-                    <div className="title-container-project">
+                    <div className="title-container-project title-background-image-3">
                       <div className="project-header">Major Projects</div>
                     </div>
                     <div className="body-project">
