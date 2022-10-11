@@ -114,14 +114,14 @@ img {
 
     /*Explicit grid */
     grid-template-areas:
-      "a  b   c"
-      "h  i   d"
-      "g  f   e";
+      "a  b   d"
+      "c  e   g"
+      "f  h   i";
 
     grid-template-rows: repeat(3, 30%);
     grid-template-columns: repeat(3, 30%);
 
-    --stagger-delay: 100ms;
+    --stagger-delay: 75ms;
   }
 
   .card {
