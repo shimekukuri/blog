@@ -1,12 +1,12 @@
 import clsx from "clsx";
 import React, { useEffect, useState } from "react";
-import { InView, useInView } from "react-intersection-observer";
+import { useInView } from "react-intersection-observer";
 import img from "./Tyler_Hutchinson_Resume .jpg";
 import "./AboutMe.css";
 import "../MajorProject.css";
 
 export default function AboutMe(props) {
-  const { inView, id } = props;
+  const { inView } = props;
   const [activeAboutMe, setActiveAboutMe] = useState(false);
   const [escapeSnapScrollBug, setEscapeSnapScrollBug] = useState(false);
   const [ref1, inView1] = useInView({
@@ -18,7 +18,6 @@ export default function AboutMe(props) {
   const [ref3, inView3] = useInView({
     threshold: 0.5,
   });
-  const containerClasses = clsx({ "animation-start": inView, id });
 
   useEffect(() => {
     if (!activeAboutMe) return;

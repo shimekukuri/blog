@@ -4,7 +4,6 @@ import Navigator from "./component/Nav";
 import "./App.css";
 import Projects from "./component/projects";
 import LandingPage from "./component/LandingPage";
-import MajorProject from "./component/MajorProject";
 import ContactMe from "./component/ContactMe";
 import AboutMe from "./component/AboutMe/AboutMe";
 
