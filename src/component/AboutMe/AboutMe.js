@@ -248,6 +248,11 @@ export default function AboutMe(props) {
                       </div>
                       <div className="mp-body-text">
                         <h3>Ecom website</h3>
+                        <div>Coming Soon</div>
+                      </div>
+                      <div className="mp-body-text">
+                        <h3>React Native App</h3>
+                        <div>Coming Soon</div>
                       </div>
                     </div>
                   </div>
