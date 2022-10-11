@@ -1,0 +1,159 @@
+body {
+  margin: 0;
+}
+
+span {
+  flex-shrink: 0;
+}
+
+.vh-full-w {
+  width: 100%;
+  height: 100%;
+}
+
+.justify {
+  justify-content: center;
+}
+
+.align {
+  align-items: center;
+  height: 100%;
+}
+
+.container-fill {
+  width: 100%;
+  height: 80%;
+  overflow-y: hidden;
+}
+
+.bg-red {
+  background-color: rgba(255, 0, 0);
+}
+
+.bg-green {
+  background-color: rgba(0, 128, 0);
+}
+
+.over-flow-x {
+  overflow-x: auto;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-center {
+  justify-content: center;
+  align-items: center;
+}
+
+.margin-auto {
+  margin-top: auto;
+}
+
+.snap-container {
+  scroll-snap-type: x mandatory;
+}
+
+.snap-child {
+  scroll-snap-align: center;
+}
+
+.py-1 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.border-r {
+  border-radius: 4px;
+}
+
+.about-nav {
+  width: 80%;
+  height: 80%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.about-nav-buttons {
+  background: linear-gradient(
+      217deg,
+      rgba(255, 0, 0, 0.8),
+      rgba(255, 0, 0, 0) 70.71%
+    ),
+    linear-gradient(127deg, rgba(255, 0, 170, 0.8), rgba(146, 199, 146, 0) 70.71%),
+    linear-gradient(336deg, rgba(2, 2, 28, 0.8), rgba(205, 205, 219, 0) 70.71%);
+    padding: 1rem;
+    border-radius: 5%;
+    animation-name: buttonAnimation;
+    animation-duration: 1000ms;
+    animation-direction: forwards;
+}
+
+.about-nav-buttons:hover {
+  transform: scale(1.1);
+}
+
+.active-nav-button {
+  transform: scale(1.2) !important;
+}
+
+.resume {
+  width: 100%;
+}
+
+@media only screen and (max-width: 900px) {
+  .p-0-R {
+    padding-right: 10%;
+  }
+
+  .p-0-L {
+    padding-left: 10%;
+  }
+
+  .full-w {
+    min-width: 90%;
+    min-height: 100%;
+  }
+
+  .p-1-L {
+    padding-left: 5%;
+  }
+
+  .p-1-R {
+    padding-right: 5%;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .p-0-R {
+    padding-right: 25%;
+  }
+
+  .p-0-L {
+    padding-left: 10%;
+  }
+
+  .full-w {
+    min-width: 80%;
+    min-height: 100%;
+  }
+
+  .p-1-L {
+    padding-left: 10%;
+  }
+
+  .p-1-R {
+    padding-right: 10%;
+  }
+}
+
+@keyframes buttonAnimation {
+  from {
+    opacity: 0%;
+  } to {
+    opacity: 100%;
+  }
+  
+}

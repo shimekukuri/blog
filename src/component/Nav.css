@@ -77,7 +77,9 @@
 }
 
 .navigator-active-animation {
-  transform: translateY(-50px);
+  opacity: 1;
+  color: white;
+  background-color: black !important;
 }
 .nav-button {
   height: 100%;

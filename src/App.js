@@ -6,6 +6,7 @@ import Projects from "./component/projects";
 import LandingPage from "./component/LandingPage";
 import MajorProject from "./component/MajorProject";
 import ContactMe from "./component/ContactMe";
+import AboutMe from "./component/AboutMe/AboutMe";
 
 function App() {
   //states
@@ -58,7 +59,7 @@ function App() {
           <LandingPage />
         </Container>
         <Container id="container2" navAlert={setActiveContainer}>
-          <MajorProject />
+          <AboutMe />
         </Container>
         <Container id="container3" navAlert={setActiveContainer}>
           <Projects sanity={sanity} URL={URL} urlParams={urlParams} />
