@@ -7,7 +7,7 @@ export default function Projects(props) {
   const { inView, sanity, urlParams } = props;
   const [transitionOut, setTransitionOut] = useState(false);
   const [selectedPost, setSelectedPost] = useState({});
-  const [showBlogPosts, setShowBlogPosts] = useState(false);
+  const [showBlogPosts, setShowBlogPosts] = useState(true);
 
   //animation trigger value
   const animationTrigger = inView ? "card" : "hide";
