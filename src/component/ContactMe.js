@@ -3,14 +3,16 @@ import { useForm } from "react-hook-form";
 import "./contactMe.css";
 
 export default function ContactMe() {
-  const [form, setForm] = useState({});
+  const [form, setForm] = useState(false);
   const [submitTheForm, setSubmitTheForm] = useState(false);
   const { register, handleSubmit } = useForm();
 
   useEffect(() => {
-    if (form === {}) return;
-    fetch(`http://localhost:4999/contactme/`, {
+    console.log(form)
+    if (!form) return;
+    fetch(`https://resumebackend-ruby.vercel.app/api/newContact`, {
       method: "POST",
+      mode: "cors",
       headers: {
         "Content-Type": "application/json",
       },
@@ -18,6 +20,7 @@ export default function ContactMe() {
     })
       .then((response) => response.json())
       .then((data) => console.log(data))
+      .catch((error) => console.log(error))
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [submitTheForm]);
 
@@ -53,7 +56,7 @@ export default function ContactMe() {
                 <input
                   className="contact-me-input"
                   {...register("email")}
-                  type="email"
+                  type="text"
                   placeholder="email"
                 />
                 <input
