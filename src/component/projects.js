@@ -59,7 +59,7 @@ export default function Projects(props) {
           selectedPost={selectedPost}
         />
       )}
-      {!showBlogPosts && (
+      {showBlogPosts && (
         <div
           className={clsx(
             "flex-center full-size",
