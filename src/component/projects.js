@@ -9,6 +9,8 @@ export default function Projects(props) {
   const [selectedPost, setSelectedPost] = useState({});
   const [showBlogPosts, setShowBlogPosts] = useState(true);
 
+  console.log(inView, sanity, urlParams);
+
   //animation trigger value
   const animationTrigger = inView ? "card" : "hide";
 
@@ -47,7 +49,7 @@ export default function Projects(props) {
       console.log(sanity);
       setSelectedPost( ...sanity.filter((post) => post._createdAt === urlParams));
       console.log(selectedPost);
-      console.log(showBlogPosts)
+      console.log(showBlogPosts);
     }
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [sanity]);
