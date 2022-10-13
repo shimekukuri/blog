@@ -47,6 +47,7 @@ export default function Projects(props) {
       console.log(sanity);
       setSelectedPost( ...sanity.filter((post) => post._createdAt === urlParams));
       console.log(selectedPost);
+      console.log(showBlogPosts)
     }
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [sanity]);
