@@ -21,7 +21,7 @@ function App() {
 
   //fetching proejcts from sanity
   useEffect(() => {
-    console.log(process.env.REACT_APP_TESTO)
+    console.log(process.env.REACT_APP_TESTO);
     document.title = "Tyler James Hutchinson";
     const yolo = new URLSearchParams(window.location.search);
     setUrlParams(yolo.get(`blog`));
@@ -32,7 +32,10 @@ function App() {
         }
         return response.json();
       })
-      .then((data) => setSanity(data.result))
+      .then((data) => {
+        console.log(data.result)
+        setSanity(data.result);
+      })
       .catch((error) => console.error(error.error));
   }, [URL]);
 
