@@ -7,9 +7,7 @@ export default function Projects(props) {
   const { inView, sanity, urlParams } = props;
   const [transitionOut, setTransitionOut] = useState(false);
   const [selectedPost, setSelectedPost] = useState({});
-  const [showBlogPosts, setShowBlogPosts] = useState(true);
-
-  console.log(`inview ${inView}, sanity ${sanity}, urlParams ${urlParams}`);
+  const [showBlogPosts, setShowBlogPosts] = useState(false);
 
   //animation trigger value
   const animationTrigger = inView ? "card" : "hide";
@@ -49,21 +47,19 @@ export default function Projects(props) {
       console.log(sanity);
       setSelectedPost( ...sanity.filter((post) => post._createdAt === urlParams));
       console.log(selectedPost);
-      console.log(showBlogPosts);
     }
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [sanity]);
 
   return (
     <>
-    <div>test</div>
       {showBlogPosts && inView && (
         <BlogPost
           handlePostClick={handlePostClick}
           selectedPost={selectedPost}
         />
       )}
-      {showBlogPosts && (
+      {!showBlogPosts && (
         <div
           className={clsx(
             "flex-center full-size",
