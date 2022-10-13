@@ -56,6 +56,7 @@ export default function Projects(props) {
 
   return (
     <>
+    <div>test</div>
       {showBlogPosts && inView && (
         <BlogPost
           handlePostClick={handlePostClick}
