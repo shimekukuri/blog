@@ -5,7 +5,7 @@ import Share from "./Share";
 import { PortableText } from "@portabletext/react";
 
 export default function BlogPost(props) {
-  const { selectedPost, handlePostClick } = props;
+  const { selectedPost, handlePostClick, handleShowBlogPosts } = props;
 
   return (
     <>
@@ -65,7 +65,7 @@ export default function BlogPost(props) {
           </div>
         </div>
       </div>
-      <ArrowSvg className="go-back-button" onClick={handlePostClick} />
+      <ArrowSvg className="go-back-button" onClick={handleShowBlogPosts} />
     </>
   );
 }

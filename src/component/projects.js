@@ -1,65 +1,108 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useReducer } from "react";
 import BlogPost from "./BlogPost";
 import "./projects.css";
 import clsx from "clsx";
 
+const ACTIONS = {
+  BLOGPOSTSELECT: "blogpostselect",
+  BLOGPOST_DESELECT: "blogpostunselect",
+  URL_PARAM_PRESENT: "urlparamsPresent",
+};
+
+const initialState = {
+  postState: {
+    showAllPosts: true,
+    showSelectedPost: false,
+  },
+  selectedPost: false,
+};
+
+const reducer = (state, action) => {
+  switch (action.type) {
+    case ACTIONS.BLOGPOSTSELECT: {
+      return {
+        ...state,
+        postState: {
+          ...state.postState,
+          showSelectedPost: true,
+          showAllPosts: false,
+        },
+        selectedPost: action.payload,
+      };
+    }
+    case ACTIONS.BLOGPOST_DESELECT: {
+      return {
+        ...state,
+        postState: {
+          ...state.postState,
+          showSelectedPost: false,
+          showAllPosts: true,
+        },
+        selectedPost: false,
+      };
+    }
+    case ACTIONS.URL_PARAM_PRESENT: {
+      return {
+        ...state,
+        postState: {
+          ...state.postState,
+          showSelectedPost: true,
+          showAllPosts: false,
+        },
+        selectedPost: action.payload,
+      };
+    }
+    default: {
+      return state;
+    }
+  }
+};
+
 export default function Projects(props) {
+  const [states, dispatch] = useReducer(reducer, initialState);
   const { inView, sanity, urlParams } = props;
   const [transitionOut, setTransitionOut] = useState(false);
-  const [selectedPost, setSelectedPost] = useState({});
-  const [showBlogPosts, setShowBlogPosts] = useState(false);
 
   //animation trigger value
   const animationTrigger = inView ? "card" : "hide";
 
   //functions for handeling animation of selecting blog posts
 
-  const handlePostClick = (e) => {
-    setTransitionOut(prev => !prev);
-    setSelectedPost(e);
-    if(urlParams) {
-      window.location.replace(`${process.env.REACT_APP_HOST}`)
-    }
+  const handlePostClick = (post) => {
+    setTransitionOut((prev) => !prev);
+    setTimeout(() => {
+      dispatch({ type: ACTIONS.BLOGPOSTSELECT, payload: post });
+    }, 1000);
   };
 
   const handleShowBlogPosts = () => {
-    setShowBlogPosts((prev) => !prev);
+    setTransitionOut((prev) => !prev);
+    dispatch({ type: ACTIONS.BLOGPOST_DESELECT });
+    if (urlParams) {
+      window.location.replace(`${process.env.REACT_APP_HOST}`);
+    }
   };
 
-  
-  useEffect(() => {
-    if (transitionOut) {
-      const plogPostTimer = setTimeout(handleShowBlogPosts, 1000);
-      
-      return () => {
-        clearTimeout(plogPostTimer);
-      };
-    } else if (!transitionOut) {
-      handleShowBlogPosts();
-    }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [selectedPost]);
-  
   //if Url Params exist than set them to selectedPost
   useEffect(() => {
     if (urlParams) {
       setTransitionOut(!transitionOut);
-      console.log(sanity);
-      setSelectedPost( ...sanity.filter((post) => post._createdAt === urlParams));
-      console.log(selectedPost);
+      let urlPost = sanity.filter((post) => post._createdAt === urlParams);
+      dispatch({type: ACTIONS.URL_PARAM_PRESENT, payload: urlPost[0]})
     }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [sanity]);
 
   return (
     <>
-      {showBlogPosts && inView && (
+      {states.postState.showSelectedPost && (
         <BlogPost
+          handleShowBlogPosts={handleShowBlogPosts}
           handlePostClick={handlePostClick}
-          selectedPost={selectedPost}
+          selectedPost={states.selectedPost}
         />
       )}
-      {!showBlogPosts && (
+      {states.postState.showAllPosts && (
         <div
           className={clsx(
             "flex-center full-size",
