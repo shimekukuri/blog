@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
-import { useForm } from "react-hook-form";
-import "./contactMe.css";
+import React, { useState, useEffect } from 'react';
+import { useForm } from 'react-hook-form';
+import './contactMe.css';
 
 export default function ContactMe() {
   const [form, setForm] = useState(false);
@@ -8,20 +8,20 @@ export default function ContactMe() {
   const { register, handleSubmit } = useForm();
 
   useEffect(() => {
-    console.log(form)
+    console.log(form);
     if (!form) return;
     fetch(`https://resumebackend-ruby.vercel.app/api/newContact`, {
-      method: "POST",
-      mode: "cors",
+      method: 'POST',
+      mode: 'cors',
       headers: {
-        "Content-Type": "application/json",
+        'Content-Type': 'application/json',
       },
       body: JSON.stringify(form),
     })
       .then((response) => response.json())
       .then((data) => console.log(data))
-      .catch((error) => console.log(error))
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+      .catch((error) => console.log(error));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [submitTheForm]);
 
   const onSubmit = (data) => {
@@ -49,25 +49,25 @@ export default function ContactMe() {
               >
                 <input
                   className="contact-me-input"
-                  {...register("name")}
+                  {...register('name')}
                   type="text"
-                  placeholder="test"
+                  placeholder="Name"
                 />
                 <input
                   className="contact-me-input"
-                  {...register("email")}
+                  {...register('email')}
                   type="text"
                   placeholder="email"
                 />
                 <input
                   className="contact-me-input"
-                  {...register("phone")}
+                  {...register('phone')}
                   type="text"
                   placeholder="phone number"
                 />
                 <input
                   className="contact-me-input"
-                  {...register("company")}
+                  {...register('company')}
                   type="text"
                   placeholder="company"
                 />
